@@ -306,7 +306,7 @@ function initProjectFilters() {
 /* --- Project Modals --- */
 const projectDataDetails = {
   project1: {
-    title: "Direct Agri-Tech Platform (Farmers to Consumers)",
+    title: "EzeeKart",
     category: "Flutter / Go / Mongo / Hive / BoltDB / AWS S3 / FCM / Bleve",
     image: "assets/project1.png",
     overview: "Direct-to-consumer agri-tech mobile ecosystem connecting local farmers directly with end consumers, eliminating middlemen to guarantee fair agricultural pricing and fresh produce delivery.",
