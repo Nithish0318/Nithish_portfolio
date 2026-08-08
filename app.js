@@ -15,7 +15,25 @@ document.addEventListener('DOMContentLoaded', () => {
   initSearchPlayground();
   initContactForm();
   initScrollTop();
+  initScrollAnimations();
 });
+
+/* --- Scroll-Triggered Reveal Animations --- */
+function initScrollAnimations() {
+  const animatedElements = document.querySelectorAll('[data-animate]');
+  if (!animatedElements.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+      }
+    });
+  }, { threshold: 0.15 });
+
+  animatedElements.forEach(el => observer.observe(el));
+}
+
 
 /* --- Interactive Particle Constellation --- */
 function initParticleCanvas() {
@@ -82,6 +100,10 @@ function initParticleCanvas() {
       ctx.fill();
 
       // Constellation connection lines
+      const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+      const strokeColor = isLight ? '0, 150, 220' : '0, 242, 254';
+      const alphaMult = isLight ? 0.35 : 0.22;
+
       for (let j = i + 1; j < particles.length; j++) {
         let p2 = particles[j];
         let dx = p.x - p2.x;
@@ -91,7 +113,7 @@ function initParticleCanvas() {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(p2.x, p2.y);
-          ctx.strokeStyle = `rgba(0, 242, 254, ${0.22 * (1 - dist / 130)})`;
+          ctx.strokeStyle = `rgba(${strokeColor}, ${alphaMult * (1 - dist / 130)})`;
           ctx.lineWidth = 0.6;
           ctx.stroke();
         }
