@@ -44,6 +44,14 @@
 
   --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-normal: 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Curated Neon Palette */
+  --color-primary: #00ffea;
+  --color-accent: #ff00d4;
+  --color-secondary: #ff6ec7;
+  --bg-dark: #0a0a0a;
+  --bg-gradient-start: #0f0f2a;
+  --bg-gradient-end: #1a1a40;
 }
 
 [data-theme="light"] {
@@ -72,13 +80,13 @@ html {
 }
 
 body {
-  background-color: var(--bg-primary);
+  background: linear-gradient(var(--bg-gradient-start), var(--bg-gradient-end));
   color: var(--text-main);
   font-family: var(--font-body);
   line-height: 1.6;
   overflow-x: hidden;
   position: relative;
-  transition: background-color var(--transition-normal), color var(--transition-normal);
+  transition: background var(--transition-normal), color var(--transition-normal);
 }
 
 /* Mouse Spotlight Glow */
@@ -98,7 +106,7 @@ body {
 }
 
 /* Particle Canvas */
-#particlesCanvas {
+#animatedBg {
   position: fixed;
   inset: 0;
   width: 100vw;
