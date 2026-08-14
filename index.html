@@ -1,564 +1,633 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
-
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Primary Meta Tags -->
-  <title>Nithishkumar S — Mobile & Backend Engineer | Flutter & Go Specialist</title>
-  <meta name="title" content="Nithishkumar S — Mobile & Backend Engineer | Flutter & Go Specialist">
-  <meta name="description"
-    content="Portfolio of Nithishkumar S, Software Engineer with 1 year 4 months experience building high-performance mobile apps in Flutter, microservices in Go, React TSX web apps, and databases (MongoDB, Bleve, Hive, BoltDB, MSSQL, AWS S3, Firebase).">
-  <meta name="keywords"
-    content="Nithishkumar S, Flutter Developer, Go Engineer, Golang, React Developer, Mobile App Engineer, MongoDB, Bleve Indexing, Hive DB, BoltDB, MSSQL, AWS S3, Firebase, Portfolio">
-  <meta name="author" content="Nithishkumar S">
-  <meta name="theme-color" content="#07090e">
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Nithishkumar S — Mobile & Backend Engineer">
-  <meta property="og:description"
-    content="Explore high-performance Flutter mobile apps, Go microservices, Bleve search indexing, and database systems built by Nithishkumar S.">
-  <meta property="og:image" content="assets/avatar.png">
-
-  <!-- Fonts & Icons -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Outfit:wght@400;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+  <title>NithishKumar S. | Full-Stack & Cross-Platform Engineer</title>
+  
+  <!-- SEO & OpenGraph Meta Tags -->
+  <meta name="description" content="Portfolio of NithishKumar S. - Full-Stack & Cross-Platform Software Engineer specializing in Flutter Monorepos, Node.js, Go microservices, and mobile ecosystems.">
+  <meta name="keywords" content="NithishKumar S, Software Engineer, Full Stack Developer, Flutter Monorepo, Melos, Node.js, Go, Radpro Infotech, EzKart">
+  <meta property="og:title" content="NithishKumar S. | Software Engineer Portfolio">
+  <meta property="og:description" content="Interactive Glassmorphism Portfolio featuring Flutter Monorepos, Financial Engines, and Full-Stack Engineering.">
+  <meta property="og:image" content="assets/profile.jpg">
+  
+  <!-- CSS & Fonts -->
+  <link rel="stylesheet" href="css/styles.css">
+  
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-
 <body>
 
-  <!-- Particle Constellation Background Canvas -->
-  <canvas id="particlesCanvas"></canvas>
+  <!-- Particle Background Canvas -->
+  <canvas id="particle-canvas"></canvas>
 
-  <!-- Ambient Background FX -->
-  <div class="ambient-bg" aria-hidden="true">
-    <div class="ambient-orb orb-1"></div>
-    <div class="ambient-orb orb-2"></div>
-    <div class="ambient-orb orb-3"></div>
-  </div>
-  <div class="grid-overlay" aria-hidden="true"></div>
-
-  <!-- Header Navigation -->
-  <header class="header" id="header" data-animate="fade">
-    <div class="container nav-container">
-      <a href="#hero" class="logo">
-        <img src="assets/logo_placeholder.png" alt="Nithishkumar S Logo" class="logo-img" width="42" height="42" loading="lazy" style="border-radius: var(--radius-sm); object-fit: cover;">
-        <span class="logo-text">Nithishkumar<span class="gradient-text">.dev</span></span>
+  <!-- Header & Navbar -->
+  <header class="header" id="header">
+    <div class="container navbar">
+      <a href="#hero" class="nav-brand">
+        <div class="logo-badge">NK</div>
+        <span>NithishKumar<span class="gradient-text">.S</span></span>
       </a>
 
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#hero" class="nav-link active">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="#about" class="nav-link active">About</a></li>
         <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
-        <li><a href="#timeline" class="nav-link">Experience</a></li>
-        <li><a href="#playground" class="nav-link">Playground</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
 
       <div class="nav-actions">
-        <button class="theme-toggle" id="themeToggle" title="Toggle Theme" aria-label="Toggle theme">☀️</button>
-        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">☰</button>
+        <button class="cmd-k-badge" id="cmd-k-trigger" title="Quick Navigation (Cmd+K)">
+          <i data-lucide="command" style="width: 14px; height: 14px;"></i>
+          <span>Search</span>
+          <span class="cmd-key">Ctrl+K</span>
+        </button>
+        
+        <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+          <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- Main Content -->
-  <main>
-    <!-- Hero Section -->
-    <section class="hero" id="hero" data-animate="slide-up">
-      <div class="container hero-grid">
-        <div class="hero-content">
-          <div class="hero-badge">
-            <span class="pulse-dot"></span>
-            <span>Available for New Projects & Roles</span>
-          </div>
-
-          <h1 class="hero-name">Nithishkumar <span class="gradient-text">S</span></h1>
-
-          <div class="hero-role">
-            <span>Engineering</span>
-            <span class="typed-text" id="typedText">Mobile & Backend Systems</span>
-          </div>
-
-          <p class="hero-bio">
-            Passionate Software Engineer with <strong>1 year 4 months</strong> of hands-on experience building
-            high-performance cross-platform mobile apps in <strong>Flutter</strong> and high-throughput backend
-            microservices in <strong>Go (Golang)</strong>. Proven track record in full-stack web applications
-            (<strong>React, TSX, TypeScript</strong>), full-text search indexing (<strong>Bleve Indexing</strong>), and
-            multi-database architectures (<strong>MongoDB, Hive DB, BoltDB, MSSQL, AWS S3, Firebase</strong>).
-          </p>
-
-          <div class="hero-cta">
-            <a href="#projects" class="btn btn-primary">
-              <span>View Featured Work</span>
-              <span>→</span>
-            </a>
-            <a href="#contact" class="btn btn-outline">
-              <span>Get In Touch</span>
-            </a>
-            <a href="https://github.com/Nithish0318" target="_blank" rel="noopener noreferrer"
-              class="btn btn-outline btn-icon" title="GitHub Profile">
-              <span>💻</span>
-            </a>
-            <a href="https://www.linkedin.com/in/nithishkumar-s-012503246/" target="_blank" rel="noopener noreferrer"
-              class="btn btn-outline btn-icon" title="LinkedIn Profile">
-              <span>🔗</span>
-            </a>
-          </div>
-
-          <div class="hero-tech-stack">
-            <span class="tech-label">Core Tech:</span>
-            <span class="tech-pill"><span>⚡</span> Flutter</span>
-            <span class="tech-pill"><span>🚀</span> Go (Golang)</span>
-            <span class="tech-pill"><span>⚛️</span> React (TSX)</span>
-            <span class="tech-pill"><span>🍃</span> MongoDB</span>
-            <span class="tech-pill"><span>🔍</span> Bleve Index</span>
-            <span class="tech-pill"><span>📦</span> AWS S3 / Firebase</span>
-          </div>
+  <!-- Hero Section -->
+  <section class="hero section" id="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="status-indicator">
+          <span class="pulse-dot"></span>
+          <span>Available for Full-Stack & Mobile Roles</span>
         </div>
 
-        <div class="hero-avatar-wrapper">
-          <div class="avatar-backdrop"></div>
-          <div class="avatar-card glass-card">
-            <img src="assets/hero_placeholder.png" alt="Nithishkumar S Cyberpunk Visual" class="avatar-img" loading="lazy">
-            <div class="avatar-overlay-badge">
-              <div>
-                <div class="experience-badge-title">Experience</div>
-                <div class="experience-badge-value">1 Year 4 Months</div>
-              </div>
-              <div>
-                <div class="experience-badge-title">Domain</div>
-                <div class="experience-badge-value">Mobile & Go Systems</div>
-              </div>
-            </div>
+        <h1 class="hero-name">Hi, I'm <span class="gradient-text">NithishKumar</span></h1>
+        
+        <div class="hero-subtitle">
+          <span>I build</span>
+          <span class="typing-text" id="typing-text"></span>
+        </div>
+
+        <p class="hero-bio">
+          Full-Stack & Cross-Platform Software Engineer with <strong>1 year 4 months</strong> of production experience at <strong>Radpro Infotech</strong> and a <strong>B.E. in CSE</strong>. Specialized in Flutter Monorepos (Melos), Node.js, Go backend microservices, financial accounting engines, and high-scale app architecture.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <span>View My Work</span>
+            <i data-lucide="arrow-right" style="width: 18px; height: 18px;"></i>
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <span>Get In Touch</span>
+          </a>
+          <div class="social-links">
+            <a href="https://github.com/Nithish0318" target="_blank" rel="noopener" class="btn-icon" title="GitHub Profile">
+              <i data-lucide="github" style="width: 20px; height: 20px;"></i>
+            </a>
+            <a href="mailto:nithishks2004@gmail.com" class="btn-icon" title="Email Me">
+              <i data-lucide="mail" style="width: 20px; height: 20px;"></i>
+            </a>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- Stats Counter Bar -->
-    <section class="section" id="stats" data-animate="zoom">
-      <div class="container">
-        <div class="stats-grid glass-card">
-          <div class="stat-card">
-            <div class="stat-number" data-target="1.3" data-suffix="+ Yrs">0</div>
-            <div class="stat-label">Industry Experience</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number" data-target="14" data-suffix="x">0</div>
-            <div class="stat-label">Go Dispatcher Speedup</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number" data-target="7" data-suffix="+">0</div>
-            <div class="stat-label">Databases Mastered</div>
-          </div>
-          <div class="stat-card">
-            <div class="stat-number" data-target="100" data-suffix="%">0</div>
-            <div class="stat-label">Financial Code Precision</div>
+      <div class="hero-avatar-wrapper">
+        <div class="hero-avatar-glow"></div>
+        <div class="hero-avatar-card glass-card">
+          <img src="assets/profile.jpg" alt="NithishKumar S." class="hero-avatar-img">
+          <div class="experience-badge">
+            <div class="exp-years">1.3+</div>
+            <div class="exp-text">Years Production<br>Experience</div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Projects Showcase Section -->
-    <section class="section" id="projects" data-animate="fade">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Featured Work</span>
-          <h2 class="section-title">Projects & Architectural Systems</h2>
+  <!-- Quick Stats Ribbon -->
+  <section class="section" id="about" style="padding-top: 0;">
+    <div class="container">
+      <div class="stats-ribbon glass-card">
+        <div class="stat-card">
+          <div class="stat-number" data-target="1.3">1.3+</div>
+          <div class="stat-label">Years Exp at Radpro</div>
         </div>
-
-        <div class="filter-bar">
-          <button class="filter-btn active" data-filter="all">All Projects</button>
-          <button class="filter-btn" data-filter="backend">Backend & Go</button>
-          <button class="filter-btn" data-filter="mobile">Mobile & Flutter</button>
-          <button class="filter-btn" data-filter="web">Web & Search</button>
+        <div class="stat-card">
+          <div class="stat-number" data-target="5">5+</div>
+          <div class="stat-label">Production Apps</div>
         </div>
-
-        <div class="projects-grid">
-          <!-- Project 1 -->
-          <div class="project-card glass-card" data-category="mobile" data-project-id="project1">
-            <div class="project-thumb-wrapper">
-              <img src="assets/project1.png" alt="Ezeekart" class="project-thumb" loading="lazy">
-              <span class="project-category-badge">Mobile & Ezee App</span>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Ezeekart</h3>
-              <p class="project-desc">
-                Direct-to-consumer mobile ecosystem connecting local farmers directly with end consumers, cutting out
-                middlemen to ensure fair pricing. Features offline order queues, Bleve crop search, and push alerts.
-              </p>
-              <div class="project-tags">
-                <span class="project-tag">Flutter</span>
-                <span class="project-tag">Go (Golang)</span>
-                <span class="project-tag">MongoDB</span>
-                <span class="project-tag">Hive DB</span>
-                <span class="project-tag">BoltDB</span>
-                <span class="project-tag">AWS S3</span>
-                <span class="project-tag">Firebase (FCM)</span>
-                <span class="project-tag">Bleve</span>
-              </div>
-              <div class="project-footer">
-                <span class="project-action-link">Click to View Architecture Details →</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project 2 -->
-          <div class="project-card glass-card" data-category="web" data-project-id="project2">
-            <div class="project-thumb-wrapper">
-              <img src="assets/project2.png" alt="Enterprise E-Commerce Platform" class="project-thumb" loading="lazy">
-              <span class="project-category-badge">Web & E-Commerce</span>
-            </div>
-            <div class="project-content">
-              <h3 class="project-title">Full-Stack Enterprise E-Commerce Platform</h3>
-              <p class="project-desc">
-                Multi-vendor e-commerce web platform engineered with a Go checkout microservice engine, React (TSX) web
-                portal, Node.js integration layer, and hybrid MongoDB + MSSQL transaction storage.
-              </p>
-              <div class="project-tags">
-                <span class="project-tag">Go (Golang)</span>
-                <span class="project-tag">React</span>
-                <span class="project-tag">Node.js</span>
-                <span class="project-tag">MongoDB</span>
-                <span class="project-tag">MSSQL</span>
-              </div>
-              <div class="project-footer">
-                <span class="project-action-link">Click to View Architecture Details →</span>
-              </div>
-            </div>
-          </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="15">15+</div>
+          <div class="stat-label">Shared Monorepo Packages</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number" data-target="100">100%</div>
+          <div class="stat-label">Clean Code Commitment</div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Skills Matrix Section -->
-    <section class="section" id="skills" data-animate="slide-up">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Tech Stack</span>
-          <h2 class="section-title">Skills & Technologies</h2>
-        </div>
-
-        <div class="skills-grid">
-          <!-- Card 1: Mobile & Frontend -->
-          <div class="skill-category-card glass-card">
-            <div class="skill-category-header">
-              <div class="skill-icon-box">📱</div>
-              <h3 class="skill-category-title">Mobile & Frontend</h3>
-            </div>
-            <div class="skill-list">
-              <div class="skill-item">
-                <div class="skill-item-header">
-                  <span class="skill-name">Flutter & Dart</span>
-                  <span class="skill-pct">92%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" style="width: 92%"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-item-header">
-                  <span class="skill-name">React & TSX</span>
-                  <span class="skill-pct">85%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" style="width: 85%"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-item-header">
-                  <span class="skill-name">TypeScript / JS (MJS)</span>
-                  <span class="skill-pct">88%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" style="width: 88%"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 2: Backend & Systems -->
-          <div class="skill-category-card glass-card">
-            <div class="skill-category-header">
-              <div class="skill-icon-box">⚡</div>
-              <h3 class="skill-category-title">Backend & Systems</h3>
-            </div>
-            <div class="skill-list">
-              <div class="skill-item">
-                <div class="skill-item-header">
-                  <span class="skill-name">Go (Golang)</span>
-                  <span class="skill-pct">90%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" style="width: 90%"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-item-header">
-                  <span class="skill-name">REST APIs & Microservices</span>
-                  <span class="skill-pct">88%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" style="width: 88%"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-item-header">
-                  <span class="skill-name">Dispatcher Pattern Architecture</span>
-                  <span class="skill-pct">95%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" style="width: 95%"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Card 3: Databases & Storage -->
-          <div class="skill-category-card glass-card">
-            <div class="skill-category-header">
-              <div class="skill-icon-box">💾</div>
-              <h3 class="skill-category-title">Databases & Search</h3>
-            </div>
-            <div class="skill-list">
-              <div class="skill-item">
-                <div class="skill-item-header">
-                  <span class="skill-name">MongoDB & MSSQL</span>
-                  <span class="skill-pct">88%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" style="width: 88%"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-item-header">
-                  <span class="skill-name">Bleve Search Indexing</span>
-                  <span class="skill-pct">85%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" style="width: 85%"></div>
-                </div>
-              </div>
-              <div class="skill-item">
-                <div class="skill-item-header">
-                  <span class="skill-name">Hive DB, BoltDB, AWS S3, Firebase</span>
-                  <span class="skill-pct">90%</span>
-                </div>
-                <div class="skill-bar-bg">
-                  <div class="skill-bar-fill" style="width: 90%"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+  <!-- Projects Showcase Section -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Featured Portfolio</span>
+        <h2 class="section-title">Production <span class="gradient-text">Projects</span></h2>
+        <p class="section-description">
+          A showcase of enterprise mobile monorepos, multi-role admin applications, financial ledger backends, and analytics dashboards built during my software engineering journey.
+        </p>
       </div>
-    </section>
 
-    <!-- Timeline / Experience Section -->
-    <section class="section" id="timeline" data-animate="zoom">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Career Milestone</span>
-          <h2 class="section-title">Work Experience</h2>
+      <!-- Filter Buttons -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="mobile">Flutter / Monorepo</button>
+        <button class="filter-btn" data-filter="backend">Backend & Go</button>
+        <button class="filter-btn" data-filter="fullstack">Full-Stack Platforms</button>
+      </div>
+
+      <!-- Projects Grid -->
+      <div class="projects-grid" id="projects-grid">
+        
+        <!-- Project 1: EzKart -->
+        <div class="project-card glass-card" data-category="mobile fullstack" data-project="ezkart">
+          <div class="project-thumb-wrapper">
+            <img src="assets/ezkart.jpg" alt="EzKart Consumer App" class="project-thumb">
+            <div class="project-overlay">
+              <button class="btn btn-primary open-project-modal" data-id="ezkart">
+                <i data-lucide="eye" style="width: 18px; height: 18px;"></i>
+                <span>View Case Study</span>
+              </button>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Melos Monorepo</span>
+              <span class="tag">Razorpay</span>
+              <span class="tag">FCM</span>
+            </div>
+            <h3 class="project-title">EzKart Consumer E-Commerce</h3>
+            <p class="project-desc">
+              High-performance consumer mobile shopping app with product catalog, cart management, Razorpay payment gateway integration, live order tracking, and Google Mobile Ads.
+            </p>
+            <div class="project-footer">
+              <button class="view-details-btn open-project-modal" data-id="ezkart">
+                <span>Explore Architecture</span>
+                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+              </button>
+            </div>
+          </div>
         </div>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card glass-card">
-              <div class="timeline-date">1 YEAR 4 MONTHS EXPERIENCE</div>
-              <h3 class="timeline-role">Software Engineer — Mobile & Backend Systems</h3>
-              <div class="timeline-company">Mobile App & Cloud Services Team</div>
-              <ul class="timeline-points">
-                <li>Architected and deployed cross-platform mobile application modules using <strong>Flutter and
-                    Dart</strong> with clean state management.</li>
-                <li>Consolidated heavy report generation logic (Ledger, Day Book, P&L, Trial Balance) from Flutter to a
-                  high-speed <strong>Go (Golang)</strong> microservice using the Dispatcher Pattern and int64 Paisa
-                  precision.</li>
-                <li>Implemented sub-millisecond search capabilities indexing high-volume enterprise records with
-                  <strong>Bleve Indexing in Go</strong>.
-                </li>
-                <li>Managed diverse database environments including <strong>MongoDB, Hive DB, BoltDB, MSSQL, AWS S3, and
-                    Firebase</strong> for robust offline-first and cloud-synced storage.</li>
-                <li>Collaborated on modern web dashboards using <strong>React, TSX, TypeScript, and MJS</strong>.</li>
+        <!-- Project 2: EzKart Admin -->
+        <div class="project-card glass-card" data-category="mobile fullstack" data-project="ezkartadmin">
+          <div class="project-thumb-wrapper">
+            <img src="assets/ezkart_admin.jpg" alt="EzKart Admin Portal" class="project-thumb">
+            <div class="project-overlay">
+              <button class="btn btn-primary open-project-modal" data-id="ezkartadmin">
+                <i data-lucide="eye" style="width: 18px; height: 18px;"></i>
+                <span>View Case Study</span>
+              </button>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Flutter Web & App</span>
+              <span class="tag">Role-Based Access</span>
+              <span class="tag">GPS Route Maps</span>
+            </div>
+            <h3 class="project-title">EzKart Multi-Role Admin Suite</h3>
+            <p class="project-desc">
+              Unified administrative application serving Farmers (inventory & harvest cataloging), Delivery Drivers (live GPS route optimization), and System Admins.
+            </p>
+            <div class="project-footer">
+              <button class="view-details-btn open-project-modal" data-id="ezkartadmin">
+                <span>Explore Architecture</span>
+                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Financial Accounting Engine -->
+        <div class="project-card glass-card" data-category="backend fullstack" data-project="accounting">
+          <div class="project-thumb-wrapper">
+            <img src="assets/accounting.jpg" alt="Financial Accounting Engine" class="project-thumb">
+            <div class="project-overlay">
+              <button class="btn btn-primary open-project-modal" data-id="accounting">
+                <i data-lucide="eye" style="width: 18px; height: 18px;"></i>
+                <span>View Case Study</span>
+              </button>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Go Microservices</span>
+              <span class="tag">Flutter</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Dispatcher Pattern</span>
+            </div>
+            <h3 class="project-title">Financial Accounting Engine</h3>
+            <p class="project-desc">
+              High-precision double-entry financial accounting system converted from Flutter to Go backend microservice. Implements Paisa precision int64, Ledger, P&L, Day Book, and Trial Balance.
+            </p>
+            <div class="project-footer">
+              <button class="view-details-btn open-project-modal" data-id="accounting">
+                <span>Explore Architecture</span>
+                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: EzBroker -->
+        <div class="project-card glass-card" data-category="mobile fullstack" data-project="ezbroker">
+          <div class="project-thumb-wrapper">
+            <img src="assets/ezbroker.jpg" alt="EzBroker Portal" class="project-thumb">
+            <div class="project-overlay">
+              <button class="btn btn-primary open-project-modal" data-id="ezbroker">
+                <i data-lucide="eye" style="width: 18px; height: 18px;"></i>
+                <span>View Case Study</span>
+              </button>
+            </div>
+          </div>
+          <div class="project-content">
+            <div class="project-tags">
+              <span class="tag">Flutter</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">Real Estate</span>
+            </div>
+            <h3 class="project-title">EzBroker Real Estate Marketplace</h3>
+            <p class="project-desc">
+              Cross-platform property listing and real-estate brokerage platform featuring geo-location filtering, direct buyer-seller messaging, and interactive property details.
+            </p>
+            <div class="project-footer">
+              <button class="view-details-btn open-project-modal" data-id="ezbroker">
+                <span>Explore Architecture</span>
+                <i data-lucide="chevron-right" style="width: 16px; height: 16px;"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Matrix Section -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Technical Competencies</span>
+        <h2 class="section-title">Skills & <span class="gradient-text">Tech Stack</span></h2>
+        <p class="section-description">
+          A comprehensive overview of my core engineering capabilities spanning front-end mobile apps, monorepo architectures, backend microservices, and databases.
+        </p>
+      </div>
+
+      <div class="skills-grid">
+        
+        <!-- Category 1 -->
+        <div class="skill-category-card glass-card">
+          <div class="category-header">
+            <div class="category-icon">
+              <i data-lucide="smartphone" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 class="category-title">Mobile & Monorepo</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-name">Flutter / Dart</span>
+                <span class="skill-pct">95%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="95%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-name">Melos Monorepo</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-name">Provider / Bloc State</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="90%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2 -->
+        <div class="skill-category-card glass-card">
+          <div class="category-header">
+            <div class="category-icon">
+              <i data-lucide="server" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 class="category-title">Backend & Microservices</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-name">Node.js / Express</span>
+                <span class="skill-pct">88%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="88%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-name">Go (Golang)</span>
+                <span class="skill-pct">82%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="82%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-name">RESTful APIs & FCM</span>
+                <span class="skill-pct">92%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="92%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3 -->
+        <div class="skill-category-card glass-card">
+          <div class="category-header">
+            <div class="category-icon">
+              <i data-lucide="database" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 class="category-title">Databases & Cloud</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-name">Firebase / Firestore</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-name">MongoDB</span>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="85%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-name">Razorpay Gateway</span>
+                <span class="skill-pct">88%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="88%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4 -->
+        <div class="skill-category-card glass-card">
+          <div class="category-header">
+            <div class="category-icon">
+              <i data-lucide="layout" style="width: 24px; height: 24px;"></i>
+            </div>
+            <h3 class="category-title">Web & Dev Tools</h3>
+          </div>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-name">HTML5 / CSS3 / JS</span>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="90%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-name">Git & Monorepo Tooling</span>
+                <span class="skill-pct">92%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="92%"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-item-header">
+                <span class="skill-name">API Load Testing</span>
+                <span class="skill-pct">80%</span>
+              </div>
+              <div class="skill-bar-bg">
+                <div class="skill-bar-fill" data-progress="80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Work Experience & Education Timeline -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Career Milestones</span>
+        <h2 class="section-title">Work Experience & <span class="gradient-text">Education</span></h2>
+        <p class="section-description">
+          My professional timeline as a Full-Stack Software Engineer building production platforms.
+        </p>
+      </div>
+
+      <div class="timeline">
+        
+        <!-- Experience Item 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-period">1 Year 4 Months (Present)</span>
+            <h3 class="timeline-role">Full-Stack Software Engineer</h3>
+            <div class="timeline-company">Radpro Infotech</div>
+            <div class="timeline-details">
+              <ul>
+                <li>Engineered and scaled enterprise Flutter monorepos (`ezapps`) using Melos, unifying consumer and administrative ecosystems.</li>
+                <li>Architected full-stack e-commerce systems featuring Razorpay payment gateways, FCM notification handlers, and live GPS delivery tracking.</li>
+                <li>Migrated legacy Flutter accounting engines to high-performance Go backend microservices using int64 Paisa precision and MongoDB.</li>
+                <li>Collaborated closely with cross-functional teams to maintain 99.9% app uptime and responsive UX.</li>
               </ul>
             </div>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Interactive Bleve Search & Go Dispatcher Playground -->
-    <section class="section" id="playground" data-animate="slide-up">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Interactive Demo</span>
-          <h2 class="section-title">Bleve Search & Go Dispatcher Sandbox</h2>
-        </div>
-
-        <div class="playground-container glass-card">
-          <div class="playground-header">
-            <div class="playground-title-box">
-              <div class="window-dots">
-                <div class="dot dot-red"></div>
-                <div class="dot dot-yellow"></div>
-                <div class="dot dot-green"></div>
-              </div>
-              <span
-                style="font-family: var(--font-code); font-size: 0.9rem; color: var(--text-muted);">bleve_indexer_simulator.go</span>
-            </div>
-            <span class="section-tag" style="margin: 0;">LIVE SIMULATION</span>
-          </div>
-
-          <div class="playground-grid">
-            <div class="playground-input-group">
-              <p style="color: var(--text-muted); font-size: 0.95rem;">
-                Test Nithishkumar's backend search indexer in real-time. Type a query keyword like <code>flutter</code>,
-                <code>go</code>, <code>mongo</code>, or <code>bleve</code> below to execute a simulated index scan.
+        <!-- Experience Item 2: Education -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card glass-card">
+            <span class="timeline-period">Graduated B.E.</span>
+            <h3 class="timeline-role">Bachelor of Engineering in CSE</h3>
+            <div class="timeline-company">Computer Science & Engineering</div>
+            <div class="timeline-details">
+              <p>
+                Rigorous computer science curriculum with distinction in Data Structures, Algorithms, Database Systems, Software Architecture, and Distributed Systems.
               </p>
-              <input type="text" id="demoSearchInput" class="demo-input"
-                placeholder="Type query keyword (e.g., flutter, go, bleve)..." value="flutter">
-              <button id="demoSearchBtn" class="btn btn-primary" style="align-self: flex-start;">
-                <span>Execute Search Query</span>
-                <span>⚡</span>
-              </button>
-            </div>
-
-            <div class="demo-console" id="demoConsole">
-              <div class="console-line"><span class="console-prompt">[$] bleve-indexer daemon started on port
-                  :8080</span></div>
-              <div class="console-line"><span class="console-info">[INIT] Loaded Bleve index shards (MongoDB & MSSQL
-                  sync active)...</span></div>
-              <div class="console-line"><span class="console-success">[READY] Type a keyword above and click
-                  execute!</span></div>
             </div>
           </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">Let's Build Something <span class="gradient-text">Extraordinary</span></h2>
+        <p class="section-description">
+          Interested in working together or have a question? Drop a message below and I'll get back to you promptly.
+        </p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info-card glass-card">
+          <div>
+            <h3 style="font-size: 1.5rem; color: #fff; margin-bottom: 0.5rem;">Contact Details</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">
+              Feel free to reach out directly via email or check out my repositories on GitHub.
+            </p>
+          </div>
+
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i data-lucide="mail" style="width: 22px; height: 22px;"></i>
+              </div>
+              <div>
+                <div class="contact-method-title">Direct Email</div>
+                <a href="mailto:nithishks2004@gmail.com" class="contact-method-val">nithishks2004@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i data-lucide="github" style="width: 22px; height: 22px;"></i>
+              </div>
+              <div>
+                <div class="contact-method-title">GitHub</div>
+                <a href="https://github.com/Nithish0318" target="_blank" rel="noopener" class="contact-method-val">github.com/Nithish0318</a>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <div class="contact-icon">
+                <i data-lucide="briefcase" style="width: 22px; height: 22px;"></i>
+              </div>
+              <div>
+                <div class="contact-method-title">Current Role</div>
+                <div class="contact-method-val" style="font-size: 1rem; color: var(--accent-cyan);">Radpro Infotech (1.3+ Yrs)</div>
+              </div>
+            </div>
+          </div>
+
+          <div style="font-size: 0.85rem; color: var(--text-dim);">
+            ⚡ Typically responds within 24 hours
+          </div>
+        </div>
+
+        <div class="contact-form-card glass-card">
+          <form id="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="form-name">Your Name</label>
+              <input type="text" id="form-name" class="form-input" placeholder="e.g. Alex Morgan" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-email">Your Email</label>
+              <input type="email" id="form-email" class="form-input" placeholder="e.g. alex@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-message">Message</label>
+              <textarea id="form-message" class="form-textarea" placeholder="Tell me about your project or opportunity..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <span>Send Message</span>
+              <i data-lucide="send" style="width: 18px; height: 18px;"></i>
+            </button>
+          </form>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact Section -->
-    <section class="section" id="contact" data-animate="fade">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Get In Touch</span>
-          <h2 class="section-title">Let's Connect & Build Together</h2>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-info-card glass-card">
-            <div class="contact-item">
-              <div class="contact-icon-box">👤</div>
-              <div>
-                <div class="contact-label">Developer</div>
-                <div class="contact-value">Nithishkumar S</div>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-icon-box">📱</div>
-              <div>
-                <div class="contact-label">Specialities</div>
-                <div class="contact-value">Flutter • Go • React • Databases</div>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-icon-box">💻</div>
-              <div>
-                <div class="contact-label">GitHub</div>
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer"
-                  class="contact-value">github.com/nithishkumar</a>
-              </div>
-            </div>
-
-            <div class="contact-item">
-              <div class="contact-icon-box">🔗</div>
-              <div>
-                <div class="contact-label">LinkedIn</div>
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-                  class="contact-value">linkedin.com/in/nithishkumar</a>
-              </div>
-            </div>
-          </div>
-
-          <div class="contact-form-card glass-card">
-            <form id="contactForm">
-              <div class="form-group">
-                <label for="formName" class="form-label">Your Name</label>
-                <input type="text" id="formName" class="form-input" placeholder="e.g., Jane Doe" required>
-              </div>
-
-              <div class="form-group">
-                <label for="formEmail" class="form-label">Your Email</label>
-                <input type="email" id="formEmail" class="form-input" placeholder="e.g., jane@example.com" required>
-              </div>
-
-              <div class="form-group">
-                <label for="formMessage" class="form-label">Project Details / Message</label>
-                <textarea id="formMessage" class="form-textarea"
-                  placeholder="Tell me about your project or opportunity..." required></textarea>
-              </div>
-
-              <button type="submit" class="btn btn-primary" style="width: 100%;">
-                <span>Send Message</span>
-                <span>🚀</span>
-              </button>
-            </form>
-          </div>
-        </div>
+  <!-- Cmd+K Command Palette Modal -->
+  <div class="modal-overlay" id="cmd-modal">
+    <div class="cmd-modal-content">
+      <div class="cmd-search-wrapper">
+        <i data-lucide="search" style="width: 20px; height: 20px; color: var(--accent-cyan);"></i>
+        <input type="text" class="cmd-search-input" id="cmd-search-input" placeholder="Type a command or search section..." autofocus>
       </div>
-    </section>
-  </main>
+      <ul class="cmd-results-list" id="cmd-results-list">
+        <!-- Injected via JavaScript -->
+      </ul>
+    </div>
+  </div>
+
+  <!-- Project Detail Case Study Modal -->
+  <div class="modal-overlay" id="project-detail-modal">
+    <div class="detail-modal-content">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close modal">
+        <i data-lucide="x" style="width: 20px; height: 20px;"></i>
+      </button>
+      <div id="project-modal-body">
+        <!-- Injected dynamically via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container footer-content">
-      <div class="footer-text">
-        © 2026 <strong>Nithishkumar S</strong>. Built with Cyberpunk Glassmorphic Vanilla Web Architecture.
+      <div>
+        <div style="font-weight: 800; font-size: 1.1rem; color: #fff;">NithishKumar S.</div>
+        <div style="color: var(--text-dim); font-size: 0.85rem; margin-top: 0.2rem;">
+          Designed & Built with HTML5, Custom CSS & Vanilla JS
+        </div>
       </div>
-      <button class="scroll-top-btn" id="scrollTopBtn" title="Back to top" aria-label="Back to top">↑</button>
+      <div style="color: var(--text-muted); font-size: 0.85rem;">
+        © 2026 NithishKumar S. All rights reserved.
+      </div>
     </div>
   </footer>
 
-  <!-- Modal Popup Container -->
-  <div class="modal-overlay" id="projectModal" aria-hidden="true">
-    <div class="modal-card glass-card">
-      <button class="modal-close-btn" id="modalCloseBtn" aria-label="Close modal">✕</button>
-      <div id="modalCategory" class="section-tag" style="margin-bottom: 0.75rem;">Category</div>
-      <h3 id="modalTitle" class="project-title" style="font-size: 1.8rem; margin-bottom: 1rem;">Project Title</h3>
-      <img id="modalImg" src="" alt="Project Image"
-        style="width: 100%; border-radius: var(--radius-md); margin-bottom: 1.5rem; border: 1px solid var(--border-glass);">
-
-      <h4
-        style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--accent-cyan);">
-        Overview</h4>
-      <p id="modalOverview" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1.5rem;"></p>
-
-      <h4
-        style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--accent-cyan);">
-        Technologies Used</h4>
-      <div id="modalTech" class="project-tags" style="margin-bottom: 1.5rem;"></div>
-
-      <h4
-        style="font-family: var(--font-heading); font-size: 1.1rem; margin-bottom: 0.5rem; color: var(--accent-cyan);">
-        Key Highlights & Architecture</h4>
-      <ul id="modalHighlights" class="timeline-points" style="margin-bottom: 1.5rem;"></ul>
-    </div>
-  </div>
-
-  <!-- JavaScript -->
-  <script src="app.js"></script>
+  <!-- JavaScript App -->
+  <script src="js/main.js"></script>
 </body>
-
 </html>
