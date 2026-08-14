@@ -291,19 +291,33 @@ body {
   font-weight: 800;
   font-size: 1.35rem;
   color: #fff;
+  transition: transform var(--transition-fast);
 }
 
-.logo-badge {
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  background: var(--grad-cyan-purple);
+.nav-brand:hover {
+  transform: translateY(-1px);
+}
+
+.logo-wrapper {
+  width: 42px;
+  height: 42px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: 900;
-  color: #fff;
-  box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+  position: relative;
+}
+
+.brand-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.4));
+  transition: transform var(--transition-normal), filter var(--transition-normal);
+}
+
+.nav-brand:hover .brand-logo {
+  transform: scale(1.08) rotate(3deg);
+  filter: drop-shadow(0 0 14px rgba(0, 242, 254, 0.8)) drop-shadow(0 0 22px rgba(127, 0, 255, 0.6));
 }
 
 .nav-menu {
