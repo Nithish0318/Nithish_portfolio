@@ -47,3 +47,4 @@ You can easily update:
 - **Color Palette**: Cyber Cyan (`#06b6d4`), Emerald (`#10b981`), Deep Slate (`#090d16`), Slate Glow (`#172033`)
 - **Typography**: `Inter` for clean prose, `Fira Code` for code & technical metrics
 - **Framework**: React 18, Vite 5, Tailwind CSS 3.4, Lucide Icons
+

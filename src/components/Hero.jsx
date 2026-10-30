@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { 
-  ArrowRight, 
-  Terminal, 
-  Copy, 
-  Check, 
-  Layers, 
-  Cpu, 
-  Sparkles, 
+import {
+  ArrowRight,
+  Terminal,
+  Copy,
+  Check,
+  Layers,
+  Cpu,
+  Sparkles,
   ExternalLink,
   Code2,
   FileText
@@ -27,9 +27,9 @@ export default function Hero() {
     <section className="relative min-h-screen pt-32 pb-20 flex items-center justify-center overflow-hidden">
       {/* Background Glows & Cyber Grid */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/20 via-[#090d16] to-[#090d16] pointer-events-none" />
-      
+
       {/* Subtle Grid lines */}
-      <div 
+      <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
         style={{
           backgroundImage: `linear-gradient(to right, #ffffff 1px, transparent 1px), linear-gradient(to bottom, #ffffff 1px, transparent 1px)`,
@@ -43,10 +43,10 @@ export default function Hero() {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
-          
+
           {/* Left Column: Hero Text & Actions */}
           <div className="lg:col-span-7 text-left space-y-6">
-            
+
             {/* Status Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-800/80 border border-slate-700/60 backdrop-blur-md shadow-sm">
               <span className="flex h-2 w-2 relative">
@@ -61,7 +61,7 @@ export default function Hero() {
             {/* Main Headline */}
             <div>
               <p className="font-mono text-sm uppercase tracking-wider text-cyan-400 font-semibold mb-2">
-                Hello World, I'm
+                Hello, I'm
               </p>
               <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight leading-tight">
                 {personal.name}
@@ -140,13 +140,13 @@ export default function Hero() {
           {/* Right Column: Interactive Terminal & Production Specs Card */}
           <div className="lg:col-span-5">
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              
+
               {/* Outer decorative gradient border */}
               <div className="relative rounded-2xl p-[1.5px] bg-gradient-to-b from-cyan-500/40 via-emerald-500/20 to-slate-800/40 shadow-2xl shadow-cyan-950/50">
-                
+
                 {/* Terminal Window */}
                 <div className="bg-[#0d1424] rounded-2xl overflow-hidden border border-white/5">
-                  
+
                   {/* Terminal Header */}
                   <div className="bg-[#0a0f1d] px-4 py-3 border-b border-white/10 flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -164,7 +164,7 @@ export default function Hero() {
 
                   {/* Terminal Content */}
                   <div className="p-5 font-mono text-xs space-y-4 text-slate-300">
-                    
+
                     <div>
                       <div className="flex items-center gap-2 text-cyan-400 font-semibold">
                         <Terminal className="w-3.5 h-3.5" />
@@ -250,3 +250,4 @@ export default function Hero() {
     </section>
   );
 }
+

@@ -11,9 +11,9 @@ export const portfolioData = {
     location: "Tamil Nadu, India",
     status: "Open to exciting opportunities & high-impact projects",
     socials: {
-      github: "https://github.com/nithishkumar",
-      linkedin: "https://linkedin.com/in/nithishkumar",
-      email: "mailto:nithishks2004@gmail.com"
+      github: "https://github.com/Nithish0318",
+      linkedin: "https://www.linkedin.com/in/nithishkumar-s-012503246/",
+      email: "nithishks2004@gmail.com"
     },
     bio: [
       "I am a passionate Full-Stack Software Engineer with 1 year and 10 months of hands-on production experience at Radpro Infotech. My core expertise bridges high-performance backend engineering with modern cross-platform mobile and web applications.",
@@ -285,3 +285,4 @@ class BrokerSearchField<T> extends StatelessWidget {
     }
   ]
 };
+

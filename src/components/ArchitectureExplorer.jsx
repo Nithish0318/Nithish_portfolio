@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
-import { 
-  Layers, 
-  Smartphone, 
-  Server, 
-  Brain, 
-  Cloud, 
-  ArrowDown, 
-  Terminal, 
+import {
+  Layers,
+  Smartphone,
+  Server,
+  Brain,
+  Cloud,
+  ArrowDown,
+  Terminal,
   CheckCircle,
   Database,
   Radio,
@@ -51,7 +51,7 @@ export default function ArchitectureExplorer() {
   return (
     <section id="architecture" className="py-24 relative bg-[#070b13]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-950/60 border border-cyan-800/40 text-cyan-400 text-xs font-mono mb-3">
@@ -68,7 +68,7 @@ export default function ArchitectureExplorer() {
 
         {/* Interactive Architecture Flow */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-          
+
           {/* Left: Architecture Stack Diagram */}
           <div className="lg:col-span-6 space-y-3">
             {architectureShowcase.layers.map((layer, index) => {
@@ -77,16 +77,14 @@ export default function ArchitectureExplorer() {
                 <div key={layer.name}>
                   <div
                     onClick={() => setActiveLayer(index)}
-                    className={`cursor-pointer p-5 rounded-2xl transition-all duration-300 border ${
-                      isActive
+                    className={`cursor-pointer p-5 rounded-2xl transition-all duration-300 border ${isActive
                         ? 'bg-[#101b33] border-cyan-500/50 shadow-xl shadow-cyan-950/40 translate-x-2'
                         : 'bg-[#0d1424]/80 border-white/5 hover:border-white/10 hover:bg-[#10192e]'
-                    }`}
+                      }`}
                   >
                     <div className="flex items-start gap-4">
-                      <div className={`p-3 rounded-xl ${
-                        isActive ? 'bg-cyan-500/20 text-cyan-400' : 'bg-slate-800 text-slate-400'
-                      }`}>
+                      <div className={`p-3 rounded-xl ${isActive ? 'bg-cyan-500/20 text-cyan-400' : 'bg-slate-800 text-slate-400'
+                        }`}>
                         {layerIcons[index]}
                       </div>
                       <div className="flex-1">
@@ -94,9 +92,8 @@ export default function ArchitectureExplorer() {
                           <h4 className={`text-base font-bold ${isActive ? 'text-white' : 'text-slate-300'}`}>
                             {layer.name}
                           </h4>
-                          <span className={`text-[10px] font-mono px-2 py-0.5 rounded ${
-                            isActive ? 'bg-cyan-950 text-cyan-400 border border-cyan-800' : 'bg-slate-800 text-slate-500'
-                          }`}>
+                          <span className={`text-[10px] font-mono px-2 py-0.5 rounded ${isActive ? 'bg-cyan-950 text-cyan-400 border border-cyan-800' : 'bg-slate-800 text-slate-500'
+                            }`}>
                             LAYER 0{index + 1}
                           </span>
                         </div>

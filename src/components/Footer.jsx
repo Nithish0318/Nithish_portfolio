@@ -12,9 +12,9 @@ export default function Footer() {
   return (
     <footer className="border-t border-white/10 bg-[#060a12] py-12 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          
+
           {/* Brand info */}
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cyan-500 to-emerald-500 p-[1.5px]">
@@ -69,14 +69,15 @@ export default function Footer() {
 
         <div className="mt-8 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-400 font-mono gap-4">
           <p>
-            © {new Date().getFullYear()} {personal.name}. Built with React, Vite & Tailwind CSS.
+            © {new Date().getFullYear()} {personal.name}.
           </p>
-          <p className="text-slate-400">
+          {/* <p className="text-slate-400">
             Showcasing real codebases from <span className="text-cyan-400">ezapps</span> & <span className="text-emerald-400">ez_pos_local_service</span>
-          </p>
+          </p> */}
         </div>
 
       </div>
     </footer>
   );
 }
+
